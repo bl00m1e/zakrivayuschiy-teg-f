@@ -1,1 +1,85 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  /* ——— Цвета ——— */
+  --text-color: #1a1a1a;
+  --background-color__section: #fff;
+  --hover-color: #000; 
+ 
+  --main-body-color: #ff3860; 
+  --accent-color: #ff3860; 
+  
+  --text-stroke-color: #fff;
+/* Переменные для цветов сердца */
+  --contour-color: #000;
+  --animation-fill-color: #f00;
+
+
+  --save-button-height: clamp(55px, 5vh ,84px);
+  
+  /* ——— Границы ——— */
+  --section-border: 2px solid #1a1a1a;
+
+  /* ——— Шрифты ——— */
+  --font-PressStart2P: 'PressStart2P', monospace;
+  --font-Inter-Variable: 'Inter', system-ui, sans-serif;
+
+  /* ——— Веса Inter ——— */
+  --font-weight-Inter-text: 400;
+  --font-weight__section-title: 700;
+
+  /*——— Размеры ——— */
+  --section-width: clamp(300px, 85vw, 600px);
+  --section-height: clamp(150px, 30vh, 200px);
+  
+  --image__inline-size: clamp(280px, 95vw, 696px);
+  --image__block-size: clamp(280px, 95vw, 696px);
+
+  --page-padding: clamp(40px, 8vw, 80px);
+
+  /* ——— Размеры кнопок ——— */
+  --button-save__inline-size: clamp(280px, 90vw, 500px);
+  --button-save__block-size: 55px;
+
+  --close__inline-size: 100%;
+  --close__block-size: 46px;
+
+  --floppy-width: 24px;
+
+  /* ——— Размеры шрифтов ——— */
+  --font-size__header-title: clamp(2.5rem, 6vw, 65px);
+  --font-size__header-span: clamp(1rem, 2.5vw, 23px);
+  --font-size__section-title: clamp(0.875rem, 2vw, 18px);
+  --font-size__section: clamp(0.875rem, 2.4vw, 18px);
+  --font-size__button-text: clamp(0.75rem, 2.5vw, 0.875rem);
+
+  /* ——— Анимации ——— */
+  --transition-duration: 0.5s;
+
+  --dialog-button-width: clamp(261px, 50vw, 293px);
+  --dialog-width: clamp(341px, 50vw, 353px);
+
+  /* ——— Фон ——— */
+  --horizontal-stripes: repeating-linear-gradient(
+    to right,
+    #d3d3d3 0px,
+    #d3d3d3 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  --vertical-stripes: repeating-linear-gradient(
+    to bottom,
+    #d3d3d3 0px,
+    #d3d3d3 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  --color-gradient: linear-gradient(
+    to bottom,
+    #e7e7e7 0%,
+    #d0d0d0 10%,
+    #a0a0a0 30%,
+    #5a5a5a 60%,
+    #1a1a1a 100%
+  );
+}
