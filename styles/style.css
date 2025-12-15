@@ -24,24 +24,23 @@
   background-attachment: fixed; 
   display: flex;
   flex-direction: column;
-  gap: 100px;
-  justify-content: center;
   align-items: center;
   line-height: normal;
 }
 
 .header {
-  inline-size: clamp(300px, 85vw, 700px);
-  block-size: clamp(200px, 40vh, 368px); 
+  margin: 20px 0 95px 0;
   display: flex;
-  margin-top: 20px;
   flex-direction: column;
   justify-content: center;
+  justify-self: center;
+  align-self: center;
   align-items: center;
+  background-color: #fff;
+  border: solid 2px #000;
+  width: clamp(375px, 48.5vw, 1440px);
   gap: 20px;
-  border: var(--section-border);
-  background-color: var(--background-color__section);
- 
+  padding: 130px 0 130px 0;
 }
 
 .header-title {
@@ -60,18 +59,17 @@
   inline-size: var(--section-width);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 50px;
+  flex: 1; 
 }
 
 .section {
-  margin: 0;
   height: auto;
   background-color: #fff;
   border: solid 2px #000;
   justify-self: center;
-  align-self: center;         
+  align-self: center;     
 }
 
 .header,
@@ -83,8 +81,7 @@
 .section-title {
   font-size: var(--font-size__section-title);
   font-weight: var(--font-weight__section-title);
-  max-block-size: 30px;
-  border: var(--section-border);
+  border-bottom: var(--section-border);
   padding: 4px 10px;
   line-height: 1.156;
 }
@@ -231,10 +228,10 @@
 }
 
 .save-card {
-  width: 335px;
+  width: clamp(306px, 90vw, 335px);
   height: 55px;
-  padding: 15px 20px;
-  gap: 8px; 
+  flex-direction: row;
+  margin-bottom: 10px;
 }
 
 .save-card-title {
@@ -246,7 +243,7 @@
   width: 266px;          
   height: 14px;         
   margin: 0;
-  padding: 0;
+  padding: 5px 5px 0 0;
   color: var(--text-stroke-color);
   mix-blend-mode: difference;
   display: flex;
@@ -371,21 +368,22 @@
   z-index: 1;
 }
 
-.floppy-icon {       
-  height: auto;
+.floppy-icon {  
+  width: 39px;    
+  height: 39px; 
+  padding: 10px 0 0 0;
   z-index: 1;
-  position: relative;
   mix-blend-mode: difference;
   color: #fff;
 }
 
 .dialog__floppy {
-  min-width: 39px;
-  height: auto;
+  width: 39px;
+  height: 39px;
   flex-shrink: 0;
-  margin: 0 0px 0 0;
+  margin: 0;
   box-sizing: border-box;
-  padding: 0 0 0 0;
+  padding: 0;
   display: block;
 }
 
@@ -449,61 +447,25 @@ body:has(.dialog[open]) {
   margin: 0;
 }
 
-@media (width >= 376px) {
-  .header {
-    inline-size: clamp(300px, 95vw, 700px);
-    block-size: clamp(200px, 40vh, 368px);
-    margin-inline: auto;
-  }
-
-  .floppy-icon {
-    min-width: 21px;
-    max-width: 29.25px;
-    padding-top: 5px;
-    margin-left: 3px;
-  }
-
-  .save-card {
-    flex-direction: row;
-  }
-}
-
 @media (width <= 376px) {
   .header {
-    inline-size: 375px;
-    block-size: 327px;
-    margin-block-start: 100px;
-    margin-inline: 0;
-    margin-top: 60px;
-    padding: 0;
-    border: 2px solid #1a1a1a;
+    width: 100%;           
+    padding: 120px 16px;   
+    margin: 60px 0 100px 0;
+    box-sizing: border-box;
+    border-radius: 0;     
   }
 
   .header-title {
-    font-size: 49px;
+    font-size: clamp(3.0625rem, 3.0625rem + 0vw, 3.0625rem);
   }
 
   .header-span {
-    font-size: 14px;
+    font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
   }
 
   .section-title {
-    padding-bottom: 16px;
-    margin-bottom: 0;
-    line-height: 1.3;
-    max-block-size: 60px; 
-    font-size: 18px;
-  }
-
-  .section-image {
-    margin: 0;
-  }
-
-  .image {
-    inline-size: 100%;
-    block-size: 100%;
-    object-fit: cover;
-    display: block;
+    font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   }
 
   .section {
@@ -514,12 +476,12 @@ body:has(.dialog[open]) {
   }
 
   .description {
-    margin-top: 12px;  
+    margin-top: 2px;  
     font-size: 18px;
   }
 
   .card__like-group {
-    margin-top: 30px;
+    margin-top: 40px;
     justify-content: flex-end; 
     gap: 6px;
   }
@@ -535,25 +497,23 @@ body:has(.dialog[open]) {
   }
 
   .save-card {
-    inline-size: 335px;
-    block-size: 55px;
-    margin: 50px auto 100px;
-    padding: 15px 20px;
-    gap: 8px;
+    width: clamp(306px, 90vw, 300px);
+    height: 84px;
+    margin-bottom: 63px;
+    flex-direction: column;
   }
 
   .save-card-title {
     font-size: 14px;
     line-height: 1;
-    inline-size: 266px;
-    block-size: 14px;
+    padding-bottom: 10px;
   }
 
-  .floppy-icon {
-    inline-size: 21px;
-    block-size: 21px;
-    margin-left: 3px;
-  }
+  .floppy-icon {  
+    width: 50px;    
+    height: 50px; 
+    padding: 10px 0 0 10px;
+}
 
   .dialog {
     inline-size: 335px;
@@ -567,8 +527,6 @@ body:has(.dialog[open]) {
   body,
   .page,
   .main {
-    overflow-x: hidden;
-    width: 100vw;
     box-sizing: border-box;
   }
 }

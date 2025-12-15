@@ -32,10 +32,10 @@
   --section-width: clamp(300px, 85vw, 600px);
   --section-height: clamp(150px, 30vh, 200px);
   
-  --image__inline-size: clamp(280px, 95vw, 696px);
-  --image__block-size: clamp(280px, 95vw, 696px);
+  --image__inline-size: clamp(371px, 95vw, 696px);
+  --image__block-size: clamp(371px, 95vw, 696px);
 
-  --page-padding: clamp(40px, 8vw, 80px);
+  --page-padding: clamp(40px, 8vw, 90px);
 
   /* ——— Размеры кнопок ——— */
   --button-save__inline-size: clamp(280px, 90vw, 500px);
